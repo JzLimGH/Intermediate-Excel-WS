@@ -64,11 +64,14 @@ Gives you a random number in (0,1)
 Format: Rand()
 
 ### LOGEST
-For the regression analysis: $y = b*m^x$
-Entering as a single cell will only return m whereas entering as an array will give you all the other regression statistics(which you can find by googling LOGEST, for this example I will only show the mechanics of comparing LOGEST and GROWTH so I only use the first and col of the first row which is m and b respectively. 
-Generally I only use it as a single cell since all I care about is the trend.  
-### GROWTH
+For the regression analysis: y = b*m^x
 
+Entering as a single cell will only return m whereas entering as an array will give you all the other regression statistics(which you can find by googling LOGEST, for this example I will only show the mechanics of comparing LOGEST and GROWTH so I only use the first row which is m and b respectively.) 
+Generally I only use it as a single cell since all I care about is the trend.  
+Format: LOGEST(Y-values,x-values,b_preference,stats_table)
+
+### GROWTH
+This function will give you the actual expected y's which are calculated. 
 
 
 
