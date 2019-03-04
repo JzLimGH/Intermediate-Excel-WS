@@ -39,23 +39,34 @@ You can quickly access all existing names in a worksheet by pressing the down ar
 
 ## Vectorizing
 ### The CSE
+Pressing Control + Shift + Enter allows you to enter formulas as arrays. This gives you the flexibility to remove intermediete steps when multiplying arrays. Some formulas, however, do require entering as an array which we will see later. 
 
 ## Functions
 ### Index 
+The Index function allows you to index a specific array of data. Format: Index(Array,RowNum,ColNum)
 
 ### Match
+Match allows you to find the the row/col number of a specific data point you might want from a list or array. Format: Match(item_youwant,list,type) Where type refers to whether you want the match to be exactly(=0) or "approximately"(=1). (I never use an approx match). 
+I like to use this functions primarily as a list comparison checker. Problem: when you have multiple lists and you want to find which values list A might have that are also in list B. 
 
 ### Together 
-
+Now as one might guess, these functions naturally work together and will end up giving you something similar to a vlookup or hlookup, but much more flexibile. The limitations of vlookup forces the data you are matching to have the indexed column on the left whereas, the Index-match combo has no restriction. Format: Index(Array_youWant,Match(index_var,Array_youWant,0))
+You can now even add another match to index from a table rather than just an array!
 
 ### Offset
+This functions allows you to look up the cell that may be i rows and j columns away from you with Offset(cell,i,j). I mainly use this function when iterating in vba since it's very useful for managing rows of data with one main cell as your anchor point. 
 
 ### Indirect
+Indirect allows you to acces a cell by looking at another cell as a reference. This allows you to create control sheets where you may have a list of cells. 
 
+### RAND
+Gives you a random number in (0,1)
+Format: Rand()
 
 ### LOGEST
-y = b*m^x
-
+For the regression analysis: $y = b*m^x$
+Entering as a single cell will only return m whereas entering as an array will give you all the other regression statistics(which you can find by googling LOGEST, for this example I will only show the mechanics of comparing LOGEST and GROWTH so I only use the first and col of the first row which is m and b respectively. 
+Generally I only use it as a single cell since all I care about is the trend.  
 ### GROWTH
 
 
