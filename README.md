@@ -73,9 +73,33 @@ Format: LOGEST(Y-values,x-values,b_preference,stats_table)
 ### GROWTH
 This function will give you the actual expected y's which are calculated. 
 
+## Just a touch of VBA
+First of a personal workbook will allow you to store shortcuts and personal functions to any other workbook you may be using. To activate your pesonal workbook, record a macro and save it as personal. Your vba sheet will now have a VBAProject tab named: Personal.xlsb. 
+
+### Creating your own function
+You can make your own fuction with the following format: 
+
+```
+Function jonneh(b As Double, m As Double, Optional x As Double) As Double
+
+jonneh = b * (m ^ x)
+
+End Function
+```
+where the final as integer defines what type is returned when you call this function in excel.
+Since we are using a personal sheet, to call this function we would have to use: Personal.xlsb!Whatever(cell_1,cell_2)
+
+### Creating shortcuts
+We can add a shortcut to a macro by clicking on Macro -> edit -> Shortcut key: CTRL + SHIT + _
+for an example will use: 
+```
+Sub Example()
+
+ActiveWorkbook.Sheets("zip_code_database").Select
 
 
-
+End Sub
+```
 
 
 
